@@ -102,7 +102,7 @@ sudo yum update -y
 ```
 
 ```
-curl --silent –location https://rpm.nodesource.com/setup\_4.x | sudo bash -
+curl --silent â€“location https://rpm.nodesource.com/setup\_4.x | sudo bash -
 ```
 ```
 sudo yum install -y nodejs
@@ -212,7 +212,7 @@ sudo pip install dnspython
 **Step 3.** We will clone some Github repositories, such as the ansible source code (which includes the dynamic inventory files such as `azure\_rm.py`), and the repository for this lab.
 
 ```
-git clone git://github.com/ansible/ansible.git –recursive
+git clone git://github.com/ansible/ansible.git â€“recursive
 ```
 ```
 git clone git://github.com/erjosito/ansible-azure-lab
@@ -261,7 +261,7 @@ Ansible allows to execute operations in machines that can be defined in a static
 ```
 python ./ansible/contrib/inventory/azure\_rm.py --list
 ```
-**Step 2.** Now we can test Ansible functionality. But we will not change anything on the target machines, just test reachability with the Ansible function &`ping`.
+**Step 2.** Now we can test Ansible functionality. But we will not change anything on the target machines, just test reachability with the Ansible function &`ping`.  You may be prompted to accept teh key fingerprint at this time.
 ```
 ansible -i ./ansible/contrib/inventory/azure\_rm.py all -m ping
 ```
@@ -277,7 +277,7 @@ ansible -i ./ansible/contrib/inventory/azure\_rm.py all -m ping
 ```
 **Step 5.** You can actually do much more with ansible, such as running any command on all the VMs returned by the dynamic inventory script, in this case `/bin/uname -a`
 ```
-ansible -i ./azure\_rm.py all -m shell -a '/bin/uname -a'
+ansible -i ./ansible/contrib/inventory/azure\_rm.py all -m shell -a '/bin/uname -a'
 ```
 # Lab 5: Creating a VM using an Ansible Playbook <a name="lab5"></a>
 
@@ -511,6 +511,6 @@ Useful links:
 
 - Ansible web page: [https://www.ansible.com](https://www.ansible.com)
 - Azure portal: [https://portal.azure.com](https://portal.azure.com)
-- Using CLI to créate a Service Principal: [https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authenticate-service-principal-cli](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authenticate-service-principal-cli)
-- Ansible documentation – Getting started with Azure: [https://docs.ansible.com/ansible/guide\_azure.html](https://docs.ansible.com/ansible/guide_azure.html)
+- Using CLI to crÃ©ate a Service Principal: [https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authenticate-service-principal-cli](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authenticate-service-principal-cli)
+- Ansible documentation â€“ Getting started with Azure: [https://docs.ansible.com/ansible/guide\_azure.html](https://docs.ansible.com/ansible/guide_azure.html)
 - Azure CLI installation on Linux and Mac: [https://azure.microsoft.com/en-us/downloads/cli-tools-install/](https://azure.microsoft.com/en-us/downloads/cli-tools-install/)
